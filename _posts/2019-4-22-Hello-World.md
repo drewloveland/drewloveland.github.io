@@ -3,9 +3,9 @@ layout: post
 title: Coming Soon!
 ---
 
-This is my first post and primarily a test run.  
+This is a test run first post.  
 
-    I'll be posting some PowerCLI / PowerShell things to this page in the near future.
+    Many PowerCLI / PowerShell things to come!
 
 Stay tuned.
 
