@@ -11,20 +11,20 @@ or...
 ```ruby
 Cannot remove the host 'hostname' because it's part of VDS 'VDSwitchname'
 ```
-&nbsp;
+&nbsp;  
 In these cases, ***the host must first be removed from the VDS***.  In addition, ***the host must be removed from any cluster and in a Disconnected state***.  
-&nbsp;
+&nbsp;  
 Of course, this can be done in PowerCLI which is easier for multiple hosts.  In my case, I wanted the scope to be all ESXi hosts which were not connected (Disconnected, Not Responding, or Maintenance Mode):
 ```ruby
 $hosts = Get-VMHost | where{$_.ConnectionState -ne "Connected"}
 ```
-&nbsp;
+&nbsp;  
 Define your VDSwitch and Datacenter, make sure to specify a match criteria relevant to your environment:
 ```ruby
 $vdswitch = Get-VDSwitch | where{$_.Name -imatch "vds"}
 $dc = Get-Datacenter
 ```
-&nbsp;
+&nbsp;  
 For each host to be decommissioned, set it to disconnected, move it to the top-level Datacenter, and remove it from the VDS.  After that, issue the `Remove-Host` cmdlet to remove the host from vCenter:
 ```ruby
 foreach($h in $hosts){
@@ -35,7 +35,7 @@ $vdswitch | Remove-VDSwitchVMHost -VMHost $h.Name -Confirm:$false
 $h | Remove-VMHost -Confirm:$false
 }
 ```
-&nbsp;
+&nbsp;  
 Full code below:
 ```ruby
 $hosts = Get-VMHost | where{$_.ConnectionState -ne "Connected"}
@@ -50,4 +50,4 @@ $vdswitch | Remove-VDSwitchVMHost -VMHost $h.Name -Confirm:$false
 $h | Remove-VMHost -Confirm:$false
 }
 ```
-&nbsp;
+&nbsp;  
