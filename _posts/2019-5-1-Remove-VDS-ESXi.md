@@ -3,7 +3,7 @@ layout: post
 title: Remove a VDS-connected ESXi host from vCenter
 ---
 
-800
+700
 You may encounter an issue with decommissioning an ESXi host (removing from vCenter inventory) when said host is a member of a VDS (vSphere distributed switch).  Even after placing into maintenance mode the "Remove from Inventory" option will still be greyed out.  Attempting to remove the host via PowerCLI will generate one of the following errors:
 ```ruby
 This method is disabled by 'com.vmware.vcIntegrity'
