@@ -11,15 +11,18 @@ pre.highlight {
   overflow: auto;
   font-size: medium !important;
   font-weight: 500 !important;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .highlight .highlight {
   border: none;
   box-shadow: none;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
