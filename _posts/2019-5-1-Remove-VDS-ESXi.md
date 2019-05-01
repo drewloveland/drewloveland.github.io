@@ -14,7 +14,7 @@ Cannot remove the host 'hostname' because it's part of VDS 'VDSwitchname'
 &nbsp;
 
 
-In these cases, ***the host must first be removed from the VDS***.  In addition, ***the host must be removed from any cluster and disconnected***.  
+In these cases, ***the host must first be removed from the VDS***.  In addition, ***the host must be removed from any cluster and in a Disconnected state***.  
 &nbsp;
 
 Of course, this can be done in PowerCLI which is easier for multiple hosts.  In my case, I wanted the scope to be all ESXi hosts which were not connected (Disconnected, Not Responding, or Maintenance Mode):
