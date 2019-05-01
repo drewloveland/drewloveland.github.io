@@ -2,7 +2,6 @@
 layout: post
 title: Remove a VDS-connected ESXi host from vCenter
 ---
-&nbsp;
 
 You may encounter an issue with decommissioning an ESXi host (removing from vCenter inventory) when said host is a member of a VDS (vSphere distributed switch).  Even after placing into maintenance mode the "Remove from Inventory" option will still be greyed out.  In these cases, ***the host must first be removed from the VDS***.  In addition, ***the host must be removed from any cluster and disconnected***.  
 &nbsp;
