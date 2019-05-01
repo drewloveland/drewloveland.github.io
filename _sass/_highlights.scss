@@ -9,8 +9,9 @@ pre.highlight {
   margin: 20px 0 20px 0;
   margin: 0px 0 0px 0;
   overflow: auto;
-  font-size: medium;
-  font-weight: bolder;
+  font-weight: bolder !important;
+  font-size: small !important;
+
 }
 
 .highlight .highlight {
@@ -20,6 +21,7 @@ pre.highlight {
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  -
 }
 
 .highlight .c { color: #586E75 } /* Comment */
