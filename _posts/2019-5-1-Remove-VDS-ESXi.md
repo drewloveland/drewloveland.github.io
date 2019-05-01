@@ -9,13 +9,15 @@ Of course, this can be done in PowerCLI which is easier for multiple hosts.  In 
 ```ruby
 $hosts = Get-VMHost | where{$_.ConnectionState -ne "Connected"}
 ```
-\
+&NewLine;
+&NewLine;
 Define your VDSwitch and Datacenter, make sure to specify a match criteria relevant to your environment:
 ```ruby
 $vdswitch = Get-VDSwitch | where{$_.Name -imatch "vds"}
 $dc = Get-Datacenter
 ```
-\
+&NewLine;
+&NewLine;
 For each host to be decommissioned, make sure it's disconnected, moved to the top-level Datacenter, and removed from the VDS:
 ```ruby
 foreach($h in $hosts){
@@ -26,7 +28,8 @@ $vdswitch | Remove-VDSwitchVMHost -VMHost $h.Name -Confirm:$false
 $h | Remove-VMHost -Confirm:$false
 }
 ```
-\
+&NewLine;
+&NewLine;
 Full code below:
 ```ruby
 $hosts = Get-VMHost | where{$_.ConnectionState -ne "Connected"}
