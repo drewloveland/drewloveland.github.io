@@ -21,7 +21,7 @@ $dc = Get-Datacenter
 &nbsp;
 &nbsp;
 
-For each host to be decommissioned, make sure it's disconnected, moved to the top-level Datacenter, and removed from the VDS:
+For each host to be decommissioned, set it to disconnected, move it to the top-level Datacenter, and remove it from the VDS.  After that, issue the `Remove-Host` cmdlet to remove the host from vCenter:
 ```ruby
 foreach($h in $hosts){
 if($h.ConnectionState -eq "Connected" -or $h.ConnectionState -imatch "maintenance"){
