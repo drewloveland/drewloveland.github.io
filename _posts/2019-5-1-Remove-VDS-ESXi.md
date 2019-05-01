@@ -37,17 +37,5 @@ $h | Remove-VMHost -Confirm:$false
 ```
 &nbsp;  
 Full code below:
-```ruby
-$hosts = Get-VMHost | where{$_.ConnectionState -ne "Connected"}
-$vdswitch = Get-VDSwitch | where{$_.Name -imatch "vds"}
-$dc = Get-Datacenter
-
-foreach($h in $hosts){
-if($h.ConnectionState -eq "Connected" -or $h.ConnectionState -imatch "maintenance"){
-$h | Set-VMHost -State Disconnected | Out-Null}
-$h | Move-VMHost -Destination $dc | Out-Null
-$vdswitch | Remove-VDSwitchVMHost -VMHost $h.Name -Confirm:$false
-$h | Remove-VMHost -Confirm:$false
-}
-```
+<script src="https://gist.github.com/drewloveland/9936187fa983b6429fc3aa2fba12038c.js"></script>
 &nbsp;  
