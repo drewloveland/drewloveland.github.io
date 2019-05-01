@@ -37,5 +37,5 @@ $h | Remove-VMHost -Confirm:$false
 ```
 &nbsp;  
 Full code below:
-[Remove-VMHost-VDS-vCenter.ps1](/scripts/Remove-VMHost-VDS-vCenter.ps1)
+<script src="https://gist.github.com/drewloveland/1288eb39311f4932f708854619dfcc39.js"></script>
 &nbsp;  
