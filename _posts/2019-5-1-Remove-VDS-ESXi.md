@@ -7,7 +7,7 @@ You may encounter an issue with decommissioning an ESXi host (removing from vCen
 ```ruby
 This method is disabled by 'com.vmware.vcIntegrity'
 ```
-Or...
+or...
 ```ruby
 Cannot remove the host 'hostname' because it's part of VDS 'VDSwitchname'
 ```
