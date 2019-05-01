@@ -48,3 +48,4 @@ $vdswitch | Remove-VDSwitchVMHost -VMHost $h.Name -Confirm:$false
 $h | Remove-VMHost -Confirm:$false
 }
 ```
+&nbsp;
