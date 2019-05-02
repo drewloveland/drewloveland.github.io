@@ -9,7 +9,7 @@ This method is disabled by 'com.vmware.vcIntegrity'
 ```
 That message is particularly inscrutable.  Or, you may see...
 ```powershell
-Cannot remove the host 'hostname' because it's part of VDS 'VDSwitchname'
+Cannot remove the host 'hostname' because it is part of VDS 'VDSwitchname'
 ```
 &nbsp;  
 In these cases, ***the host must first be removed from the VDS***. In addition, ***the host must be removed from any cluster and in a Disconnected state***. Of course, this can be done in PowerCLI which is easier for multiple hosts.  
