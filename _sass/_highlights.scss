@@ -11,8 +11,8 @@ pre.highlight {
   overflow: auto;
   font-size: 80% !important;
   font-weight: 600 !important;
-  -webkit-font-smoothing: subpixel-antialiased;
-  filter: invert(100%);
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  filter: invert(100%) !important;
 }
 
 .highlight .highlight {
