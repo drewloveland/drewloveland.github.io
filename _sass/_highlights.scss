@@ -1,6 +1,6 @@
 
 pre.highlight {
-  background-color: rgba(241, 241, 241, 0.882);
+  background-color: rgba(39, 39, 39, 0.882);
   padding: 7px 7px 7px 10px;
   border: 1px solid #ddd;
   -moz-box-shadow: 2px 2px rgba(0,0,0,0.1);
@@ -12,6 +12,7 @@ pre.highlight {
   font-size: 80% !important;
   font-weight: 600 !important;
   -webkit-font-smoothing: subpixel-antialiased;
+  filter: invert()
 }
 
 .highlight .highlight {
